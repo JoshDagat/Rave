@@ -28,12 +28,12 @@ body {
   background-size: cover;
 }
 
-/* @media screen and (min-width:) {
+@media screen and (min-width: 950px) {
   body {
     background: none;
     padding: 0;
   }
-} */
+}
 
 .background-left {
   width: 25%;
@@ -49,13 +49,14 @@ body {
   align-items: center;
 }
 
-/* 
-@media screen and (min-width:) {
+
+@media screen and (min-width: 950px) {
   .background-left {
     display: flex;
+    width: 50%;
   }
 
-} */
+}
 
 .logo {
   transform: scale(1.5);
@@ -76,6 +77,12 @@ body {
   margin-bottom: 24px;
 }
 
+@media screen and (min-width: 950px) {
+  .logo-mobile {
+    display: none;
+  }
+}
+
 .background-left:before {
   content: '';
   position: absolute;
@@ -91,15 +98,15 @@ body {
   border-radius: 5px;
 }
 
-/* 
-@media screen and (min-width:) {
+
+@media screen and (min-width: 950px) {
   .content-right {
-    width: 75%;
-    margin-left: 25%;
+    width: 50%;
+    margin-left: 50%;
     background: transparent;
     border-radius: 0px;
   }
-} */
+}
 
 
 header {
@@ -121,16 +128,16 @@ header>p:last-of-type {
 }
 
 
-/* @media screen and (min-width:) {
+@media screen and (min-width: 950px) {
   header {
     padding-top: 100px;
     padding: 20px;
   }
 
-  header > p {
+  header>p {
     display: block;
   }
-} */
+}
 
 .signup-form {
   padding: 20px 0px 50px;
@@ -158,11 +165,11 @@ h1 {
   text-align: center;
 }
 
-/* @media screen and (min-width:) {
+@media screen and (min-width: 950px) {
   h1 {
     text-align: left;
   }
-} */
+}
 
 .user-input {
   margin-bottom: 20px;
@@ -276,13 +283,17 @@ h1 {
   text-align: center;
 }
 
-/* @media screen and (min-width:) {
+@media screen and (min-width: 950px) {
 
   .create-acc-btn,
   .cta-sign-in {
     margin-left: 50px;
   }
-} */
+
+  .cta-sign-in {
+    text-align: left;
+  }
+}
 
 .cta-sign-in>a:link {
   color: violet;
