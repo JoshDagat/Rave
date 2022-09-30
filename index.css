@@ -1,0 +1,291 @@
+@import url("./reset.css");
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+:root {
+  --screen-height: 100vh;
+  --black-shade: rgba(0, 0, 0, 0.2);
+  --system-fonts: system-ui,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif,
+    "Apple Color Emoji",
+    "Segoe UI Emoji",
+    "Segoe UI Symbol";
+  --main-font: 'Manrope', sans-serif;
+  --root-font:
+}
+
+body {
+  display: flex;
+  height: min-content;
+  min-height: var(--screen-height);
+  font-family: var(--main-font), var(--system-fonts);
+  padding: 16px;
+  background: url("bg-form.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* @media screen and (min-width:) {
+  body {
+    background: none;
+    padding: 0;
+  }
+} */
+
+.background-left {
+  width: 25%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  background: url("bg-form.avif");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 35%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+@media screen and (min-width:) {
+  .background-left {
+    display: flex;
+  }
+
+} */
+
+.logo {
+  transform: scale(1.5);
+  display: block;
+  margin: 0 auto;
+  border-radius: 5px;
+  opacity: 0.8;
+}
+
+.logo-mobile {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  margin-bottom: 24px;
+}
+
+.background-left:before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  left: 0;
+  height: 100%;
+  background-color: var(--black-shade);
+}
+
+.content-right {
+  width: 100%;
+  background: #fff;
+  border-radius: 5px;
+}
+
+/* 
+@media screen and (min-width:) {
+  .content-right {
+    width: 75%;
+    margin-left: 25%;
+    background: transparent;
+    border-radius: 0px;
+  }
+} */
+
+
+header {
+  padding: 20px;
+  padding-top: 20px;
+  padding-bottom: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+  font-size: clamp(0.5rem, 5vw, 1.25rem);
+  line-height: 1.5;
+}
+
+header>p:not(:last-of-type) {
+  display: none;
+}
+
+header>p:last-of-type {
+  text-align: center;
+}
+
+
+/* @media screen and (min-width:) {
+  header {
+    padding-top: 100px;
+    padding: 20px;
+  }
+
+  header > p {
+    display: block;
+  }
+} */
+
+.signup-form {
+  padding: 20px 0px 50px;
+}
+
+.hidden {
+  border: 0;
+  clip: rect(1px 1px 1px 1px);
+  /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
+
+h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  grid-area: heading;
+  text-align: center;
+}
+
+/* @media screen and (min-width:) {
+  h1 {
+    text-align: left;
+  }
+} */
+
+.user-input {
+  margin-bottom: 20px;
+}
+
+.user-input>label {
+  display: block;
+  font-size: 0.6rem;
+  letter-spacing: 1.5px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+
+.user-input>input {
+  border: none;
+  border-radius: 2px;
+  box-shadow: inset 0 0 1px 1px rgba(0, 0, 0, 0.2);
+  background: #fff;
+  /* width: 250px; */
+  width: 100%;
+  height: 30px;
+}
+
+@media screen and (min-width: 650px) {
+  .user-input>input {
+    max-width: 350px;
+  }
+}
+
+.user-input>input:focus {
+  outline: 1px solid orange;
+}
+
+.user-input>input:invalid {
+  border: 1px solid red;
+}
+
+.signup-form>fieldset {
+  display: flex;
+  flex-direction: column;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  padding: 20px 50px;
+  margin-bottom: 50px;
+}
+
+@media screen and (min-width: 650px) {
+  .signup-form>fieldset {
+    display: grid;
+    grid-template-areas:
+      "heading heading"
+      "first last"
+      "email phone"
+      "pass confirm";
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 20px;
+  }
+
+  .user-input:nth-of-type(1) {
+    grid-area: first;
+  }
+
+  .user-input:nth-of-type(2) {
+    grid-area: last;
+  }
+
+  .user-input:nth-of-type(3) {
+    grid-area: email;
+  }
+
+  .user-input:nth-of-type(4) {
+    grid-area: phone;
+  }
+
+  .user-input:nth-of-type(5) {
+    grid-area: pass;
+  }
+
+  .user-input:nth-of-type(6) {
+    grid-area: confirm;
+  }
+}
+
+
+.create-acc-btn {
+  display: block;
+  padding: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  font-family: var(--main-font, --system-fonts);
+  border: none;
+  border-radius: 5px;
+  /* margin-left: 50px; */
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, violet, orange);
+  color: #1a1a1a;
+  -webkit-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  cursor: pointer;
+}
+
+.cta-sign-in {
+  display: block;
+  font-size: 0.75rem;
+  text-align: center;
+}
+
+/* @media screen and (min-width:) {
+
+  .create-acc-btn,
+  .cta-sign-in {
+    margin-left: 50px;
+  }
+} */
+
+.cta-sign-in>a:link {
+  color: violet;
+  text-decoration: none;
+  font-weight: bold;
+}
