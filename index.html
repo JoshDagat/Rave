@@ -32,16 +32,19 @@
         <div class="user-input">
           <label for="first-name">First Name</label>
           <input id="first-name" name="first-name" type="text" />
+          <span class="error">This field is required</span>
         </div>
 
         <div class="user-input">
           <label for="last-name">Last Name</label>
           <input id="last-name" name="last-name" type="text" />
+          <span class="error">This field is required</span>
         </div>
 
         <div class="user-input">
           <label for="email">Email</label>
           <input id="email" name="email" type="email" />
+          <span class="error">This field is required</span>
         </div>
 
         <div class="user-input">
@@ -52,11 +55,13 @@
         <div class="user-input">
           <label for="password">Password</label>
           <input id="password" name="password" type="password" minlength="6" />
+          <span class="error">This field is required</span>
         </div>
 
         <div class="user-input">
           <label for="confirm-pass">Confirm Password</label>
           <input id="confirm-pass" name="confirm-pass" type="password" minlength="6" />
+          <span class="error">This field is required</span>
         </div>
       </fieldset>
 
@@ -64,6 +69,7 @@
       <p class="cta-sign-in">Already have an account? <a href="#">Log in</a></p>
     </form>
   </main>
+  <script src="./index.js"></script>
 </body>
 
 </html>
